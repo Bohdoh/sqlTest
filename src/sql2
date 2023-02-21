@@ -18,3 +18,7 @@ VALUES ('Winter is coming','Baco','Drama');
 
 DELETE FROM book
 WHERE book_id = 2;
+
+INSERT customer(name,email,phone)
+VALUES ('Tim', 'test@gmail.com','1231254');
+
