@@ -1,0 +1,20 @@
+use mydb;
+
+INSERT book(title,author,genre)
+    VALUES ('Java ist toll!','Marc','Drama');
+
+UPDATE book
+SET title = 'Java ist Kuhl!'
+WHERE book_id = 1;
+
+INSERT book(title,author,genre)
+VALUES ('Spring Rules','Rene','Fiction');
+
+INSERT book(title,author,genre)
+VALUES ('Cooking with Thymeleaf','Bodo','Science');
+
+INSERT book(title,author,genre)
+VALUES ('Winter is coming','Baco','Drama');
+
+DELETE FROM book
+WHERE book_id = 2;
