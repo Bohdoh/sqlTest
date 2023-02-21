@@ -22,3 +22,36 @@ WHERE book_id = 2;
 INSERT customer(name,email,phone)
 VALUES ('Tim', 'test@gmail.com','1231254');
 
+ALTER TABLE transaction
+DROP COLUMN return_date;
+
+ALTER TABLE transaction
+DROP COLUMN checkout_date;
+
+ALTER TABLE transaction
+ADD COLUMN  checkout_date DATETIME;
+
+ALTER TABLE transaction
+ADD COLUMN  return_date DATETIME;
+
+ALTER TABLE transaction
+MODIFY COLUMN checkout_date DATE;
+
+ALTER TABLE transaction
+    MODIFY COLUMN return_date DATE;
+
+INSERT transaction(book_book_id,customer_customer_id,checkout_date,return_date)
+VALUES (1,1,'2005-11-11','2012-11-11');
+
+INSERT transaction(book_book_id,customer_customer_id,checkout_date,return_date)
+VALUES (3,1,'2007-11-11','2012-11-11');
+
+INSERT transaction(book_book_id,customer_customer_id,checkout_date,return_date)
+VALUES (4,1,'2008-11-11','2012-11-11');
+
+INSERT transaction(book_book_id,customer_customer_id,checkout_date,return_date)
+VALUES (1,1,'2009-11-11','2012-11-11');
+
+SELECT *
+from transaction
+WHERE transaction.checkout_date > '2005-1-1' AND transaction.checkout_date < '2009-1-1';
